@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1"/>
+		<title>Score SF-12</title>
+		<link rel="stylesheet" type="text/CSS" href="Style.css" />
+	</head>
+	
+	<header>
+			
+		
+		<h1 class="entete"; style="position: absolute; top:10px; left:40%;">SF-12</h1>
+		
+		
+		
+		</header>
+	
+	<body>
+	
+			
+			
+			
+			
+			<div style=" position: absolute; top:200px; left: 600px;">
+				<button id="ok11"; class='button'; style=" position: absolute; top:0px; left: 0px;">CALCUL</button>
+				<button id="reset"; class='button'; style=" position: absolute; top:200px; left: 0px;">RESET</button>
+				<div style="text-align:center; display:block;  position: absolute; top:70px; left:100px; width: 220px"   size="10" class="text"> Score mental et social: </div>
+				<div style="text-align:center; display:block;  position: absolute; top:130px; left:100px; width: 220px" " class="text"> Score physique: </div>
+				<div style="text-align:center; display:block;  position: absolute; top:70px; left:400px; "><input type="text" id="totalc" value="0" size="6" readonly="true" style="background-color:#FFFFFF; border:#FFFFFF none 0px; text-align:center; font-size:30px"> </div>
+				<div style="text-align:center; display:block;  position: absolute; top:130px; left:400px; "><input type="text" id="totald" value="0" size="6" readonly="true" style="background-color:#FFFFFF; border:#FFFFFF none 0px; text-align:center; font-size:30px"> </div>
+				<a href="Index.html"; class='button'; style=" position: absolute; top:270px; left: 0px;">HOME</a>
+			</div>
+	
+	<!--Question 1-->
+		<div style="position: absolute; top:10%; left:15%; right: 5%;"> Question 1
+		
+		<input id="q1.1" type="radio" name="question1" class="radio" value="1"/>
+		<input id="q1.2" type="radio" name="question1" class="radio" value="2"/>
+		<input id="q1.3" type="radio" name="question1" class="radio" value="3"/>
+		<input id="q1.4" type="radio" name="question1" class="radio" value="4"/>
+		<input id="q1.5" type="radio" name="question1" class="radio" value="5"/>
+		
+		</div>
+
+			<script language="javascript">
+								var q1=0;
+								function modifier_q1(increment) {
+								q1=increment;
+								document.getElementById('q1').value = q1;
+								}
+								
+								var aq1=0;
+								function modifier_aq1(increment) {
+								aq1=increment;
+								document.getElementById('aq1').value = aq1;
+								}
+								
+								var bq1=0;
+								function modifier_bq1(increment) {
+								bq1=increment;
+								document.getElementById('bq1').value = bq1;
+								}
+								
+								
+								
+			</script>
+								
+			<div style="text-align:center; display:block;  position: absolute; top:10%; left:50%; display:none; "><input type="text" id="q1"  value="0" size="3" readonly="true" style="background-color:#FFFFFF; border:#FFFFFF none 0px; text-align:center; font-size:30px"> </div>
+			<div style="text-align:center; display:block;  position: absolute; top:10%; left:60%; display:none; "><input type="text" id="aq1" value="0" size="3" readonly="true" style="background-color:#FFFFFF; border:#FFFFFF none 0px; text-align:center; font-size:30px"> </div>					
+			<div style="text-align:center; display:block;  position: absolute; top:10%; left:70%; display:none; "><input type="text" id="bq1" value="0" size="3" readonly="true" style="background-color:#FFFFFF; border:#FFFFFF none 0px; text-align:center; font-size:30px"> </div>				
+			
+			<script language="javascript">
+				document.getElementById('q1').value=q1;
+				document.getElementById('aq1').value=aq1;
+				
+				document.getElementById("q1.1").onclick = function() {
+				modifier_q1(+1); modifier_aq1(0); modifier_bq1(0);
+				}
+				document.getElementById("q1.2").onclick = function() {
+				modifier_q1(+2); modifier_aq1(-1.31872); modifier_bq1(-0.0606);
+				}
+				document.getElementById("q1.3").onclick = function() {
+				modifier_q1(+3); modifier_aq1(-3.02396); modifier_bq1(0.0348);
+				}
+				document.getElementById("q1.4").onclick = function() {
+				modifier_q1(+4); modifier_aq1(-5.56461); modifier_bq1(-0.1689);
+				} 
+				document.getElementById("q1.5").onclick = function() {
+				modifier_q1(+5); modifier_aq1(-8.37399); modifier_bq1(-1.71175);
+				}
+				
+				
+			</script>
+		
+	<!--Question 2-->
+		<div style="position: absolute; top:15%; left:15%; right: 5%;"> Question 2a
+		<input id="q2.1" type="radio" name="question2" class="radio" onclick="verifie_check_box(1)"/>
+		<input id="q2.2" type="radio" name="question2" class="radio" onclick="verifie_check_box(2)"/>
+		<input id="q2.3" type="radio" name="question2" class="radio" onclick="verifie_check_box(3)"/>
+		
+		</div>
+
+			<script language="javascript">
+								var q2=0;
+								function modifier_q2(increment) {
+								q2=increment;
+								document.getElementById('q2').value = q2;
+								}
+								
+								var aq2=0;
+								function modifier_aq2(increment) {
+								aq2=increment;
+								document.getElementById('aq2').value = aq2;
+								}
+								
+								var bq2=0;
+								function modifier_bq2(increment) {
+								bq2=increment;
+								document.getElementById('bq2').value = bq2;
+								}
+								
+			</script>
+								
+			<div style="text-align:center; display:none;  position: absolute; top:15%; left:50%;  "><input type="text" id="q2" value="0" size="3" readonly="true" style="background-color:#FFFFFF; border:#FFFFFF none 0px; text-align:center; font-size:30px"> </div>
+			<div style="text-align:center; display:none;  position: absolute; top:15%; left:60%;  "><input type="text" id="aq2" value="0" size="3" readonly="true" style="background-color:#FFFFFF; border:#FFFFFF none 0px; text-align:center; font-size:30px"> </div>					
+			<div style="text-align:center; display:none;  position: absolute; top:15%; left:70%;  "><input type="text" id="bq2" value="0" size="3" readonly="true" style="background-color:#FFFFFF; border:#FFFFFF none 0px; text-align:center; font-size:30px"> </div>			
+			
+			<script language="javascript">
+				document.getElementById('q2').value=q1;
+				document.getElementById('aq2').value=aq2;
+				
+				document.getElementById("q2.1").onclick = function() {
+				modifier_q2(+1); modifier_aq2(-7.23216); modifier_bq2(3.9311);
+				}
+				document.getElementById("q2.2").onclick = function() {
+				modifier_q2(+2); modifier_aq2(-3.45555); modifier_bq2(1.8684);
+				}
+				document.getElementById("q2.3").onclick = function() {
+				modifier_q2(+3); modifier_aq2(0); modifier_bq2(0);
+				}
+				
+			</script>
+	
+	<!--Question 3-->
+		<div style="position: absolute; top:20%; left:15%; right: 5%;"> Question 2b
+		<input id="q3.1" type="radio" name="question3" class="radio" onclick="verifie_check_box(1)"/>
+		<input id="q3.2" type="radio" name="question3" class="radio" onclick="verifie_check_box(2)"/>
+		<input id="q3.3" type="radio" name="question3" class="radio" onclick="verifie_check_box(3)"/>
+		
+		</div>
+
+			<script language="javascript">
+								var q3=0;
+								function modifier_q3(increment) {
+								q3=increment;
+								document.getElementById('q3').value = q3;
+								}
+								
+								var aq3=0;
+								function modifier_aq3(increment) {
+								aq3=increment;
+								document.getElementById('aq3').value = aq3;
+								}
+								
+								var q3=0;
+								function modifier_bq3(increment) {
+								bq3=increment;
+								document.getElementById('bq3').value = bq3;
+								}
+								
+			</script>
+								
+			<div style="text-align:center; display:none;  position: absolute; top:20%; left:50%; "><input type="text" id="q3" value="0" size="3" readonly="true" style="background-color:#FFFFFF; border:#FFFFFF none 0px; text-align:center; font-size:30px"> </div>
+			<div style="text-align:center; display:none;  position: absolute; top:20%; left:60%; "><input type="text" id="aq3" value="0" size="3" readonly="true" style="background-color:#FFFFFF; border:#FFFFFF none 0px; text-align:center; font-size:30px"> </div>					
+			<div style="text-align:center; display:none;  position: absolute; top:20%; left:70%; "><input type="text" id="bq3" value="0" size="3" readonly="true" style="background-color:#FFFFFF; border:#FFFFFF none 0px; text-align:center; font-size:30px"> </div>
+			
+			<script language="javascript">
+				document.getElementById('q3').value=q1;
+				document.getElementById("q3.1").onclick = function() {
+				modifier_q3(+1); modifier_aq3(-6.24397); modifier_bq3(2.6828);
+				}
+				document.getElementById("q3.2").onclick = function() {
+				modifier_q3(+2); modifier_aq3(-2.73557); modifier_bq3(1.4310);
+				}
+				document.getElementById("q3.3").onclick = function() {
+				modifier_q3(+3); modifier_aq3(0); modifier_bq3(0);
+				} 
+				
+			</script>	
+
+	<!--Question 4--> 
+		<div style="position: absolute; top:25%; left:15%; right: 5%;"> Question 3a
+		<input id="q4.1" type="radio" name="question4" class="radio" onclick="verifie_check_box(1)"/>
+		<input id="q4.2" type="radio" name="question4" class="radio" onclick="verifie_check_box(2)"/>
+		
+		</div>
+
+			<script language="javascript">
+								var q4=0;
+								function modifier_q4(increment) {
+								q4=increment;
+								document.getElementById('q4').value = q4;
+								}
+								
+								var aq4=0;
+								function modifier_aq4(increment) {
+								aq4=increment;
+								document.getElementById('aq4').value = aq4;
+								}
+								
+								var bq4=0;
+								function modifier_bq4(increment) {
+								bq4=increment;
+								document.getElementById('bq4').value = bq4;
+								}
+								
+			</script>
+								
+			<div style="text-align:center; display:none;  position: absolute; top:25%; left:50%; "><input type="text" id="q4" value="0" size="3" readonly="true" style="background-color:#FFFFFF; border:#FFFFFF none 0px; text-align:center; font-size:30px"> </div>
+			<div style="text-align:center; display:none;  position: absolute; top:25%; left:60%; "><input type="text" id="aq4" value="0" size="3" readonly="true" style="background-color:#FFFFFF; border:#FFFFFF none 0px; text-align:center; font-size:30px"> </div>					
+			<div style="text-align:center; display:none;  position: absolute; top:25%; left:70%; "><input type="text" id="bq4" value="0" size="3" readonly="true" style="background-color:#FFFFFF; border:#FFFFFF none 0px; text-align:center; font-size:30px"> </div>
+			
+			<script language="javascript">
+				document.getElementById('q4').value=q1;
+				document.getElementById("q4.1").onclick = function() {
+				modifier_q4(+1); modifier_aq4(-4.61617); modifier_bq4(1.44060);
+				}
+				document.getElementById("q4.2").onclick = function() {
+				modifier_q4(+2); modifier_aq4(0); modifier_bq4(0);
+				}
+				
+			</script>
+	
+	<!--Question 5--> 
+		<div style="position: absolute; top:30%; left:15%; right: 5%;"> Question 3b
+		<input id="q5.1" type="radio" name="question5" class="radio" onclick="verifie_check_box(1)"/>
+		<input id="q5.2" type="radio" name="question5" class="radio" onclick="verifie_check_box(2)"/>
+		
+		
+		</div>
+
+			<script language="javascript">
+								var q5=0;
+								function modifier_q5(increment) {
+								q5=increment;
+								document.getElementById('q5').value = q5;
+								}
+								
+								var aq5=0;
+								function modifier_aq5(increment) {
+								aq5=increment;
+								document.getElementById('aq5').value = aq5;
+								}
+								
+								var bq5=0;
+								function modifier_bq5(increment) {
+								bq5=increment;
+								document.getElementById('bq5').value = bq5;
+								}
+								
+			</script>
+								
+			<div style="text-align:center; display:none;  position: absolute; top:30%; left:50%; "><input type="text" id="q5" value="0" size="3" readonly="true" style="background-color:#FFFFFF; border:#FFFFFF none 0px; text-align:center; font-size:30px"> </div>
+			<div style="text-align:center; display:none;  position: absolute; top:30%; left:60%; "><input type="text" id="aq5" value="0" size="3" readonly="true" style="background-color:#FFFFFF; border:#FFFFFF none 0px; text-align:center; font-size:30px"> </div>					
+			<div style="text-align:center; display:none;  position: absolute; top:30%; left:70%; "><input type="text" id="bq5" value="0" size="3" readonly="true" style="background-color:#FFFFFF; border:#FFFFFF none 0px; text-align:center; font-size:30px"> </div>			
+			
+			<script language="javascript">
+				document.getElementById('q5').value=q1;
+				document.getElementById("q5.1").onclick = function() {
+				modifier_q5(+1); modifier_aq5(-5.51747); modifier_bq5(1.66968);
+				}
+				document.getElementById("q5.2").onclick = function() {
+				modifier_q5(+2); modifier_aq5(0); modifier_bq5(0);
+				}
+				
+			</script>
+			
+		<!--Question 6-->
+		<div style="position: absolute; top:35%; left:15%; right: 5%;"> Question 4a
+		<input id="q6.1" type="radio" name="question6" class="radio" onclick="verifie_check_box(1)"/>
+		<input id="q6.2" type="radio" name="question6" class="radio" onclick="verifie_check_box(2)"/>
+		
+		</div>
+
+			<script language="javascript">
+								var q6=0;
+								function modifier_q6(increment) {
+								q6=increment;
+								document.getElementById('q6').value = q6;
+								}
+								
+								var aq6=0;
+								function modifier_aq6(increment) {
+								aq6=increment;
+								document.getElementById('aq6').value = aq6;
+								}
+								
+								var bq6=0;
+								function modifier_bq6(increment) {
+								bq6=increment;
+								document.getElementById('bq6').value = bq6;
+								}
+								
+			</script>
+								
+			<div style="text-align:center; display:none;  position: absolute; top:35%; left:50%; "><input type="text" id="q6" value="0" size="3" readonly="true" style="background-color:#FFFFFF; border:#FFFFFF none 0px; text-align:center; font-size:30px"> </div>
+			<div style="text-align:center; display:none;  position: absolute; top:35%; left:60%; "><input type="text" id="aq6" value="0" size="3" readonly="true" style="background-color:#FFFFFF; border:#FFFFFF none 0px; text-align:center; font-size:30px"> </div>					
+			<div style="text-align:center; display:none;  position: absolute; top:35%; left:70%; "><input type="text" id="bq6" value="0" size="3" readonly="true" style="background-color:#FFFFFF; border:#FFFFFF none 0px; text-align:center; font-size:30px"> </div>			
+			
+			<script language="javascript">
+				document.getElementById('q6').value=q1;
+				document.getElementById("q6.1").onclick = function() {
+				modifier_q6(+1); modifier_aq6(3.04365); modifier_bq6(-6.82672);
+				}
+				document.getElementById("q6.2").onclick = function() {
+				modifier_q6(+2); modifier_aq6(0); modifier_bq6(0);
+				}
+				
+			</script>
+		
+		<!--Question 7-->
+		<div style="position: absolute; top:40%; left:15%; right: 5%;"> Question 4b
+		<input id="q7.1" type="radio" name="question7" class="radio" onclick="verifie_check_box(1)"/>
+		<input id="q7.2" type="radio" name="question7" class="radio" onclick="verifie_check_box(2)"/>
+		
+		</div>
+
+			<script language="javascript">
+								var q7=0;
+								function modifier_q7(increment) {
+								q7=increment;
+								document.getElementById('q7').value = q7;
+								}
+								
+								var aq7=0;
+								function modifier_aq7(increment) {
+								aq7=increment;
+								document.getElementById('aq7').value = aq7;
+								}
+								
+								var q7=0;
+								function modifier_bq7(increment) {
+								bq7=increment;
+								document.getElementById('bq7').value = bq7;
+								}
+			</script>
+								
+			<div style="text-align:center; display:none;  position: absolute; top:40%; left:50%; "><input type="text" id="q7" value="0" size="3" readonly="true" style="background-color:#FFFFFF; border:#FFFFFF none 0px; text-align:center; font-size:30px"> </div>
+			<div style="text-align:center; display:none;  position: absolute; top:40%; left:60%; "><input type="text" id="aq7" value="0" size="3" readonly="true" style="background-color:#FFFFFF; border:#FFFFFF none 0px; text-align:center; font-size:30px"> </div>					
+			<div style="text-align:center; display:none;  position: absolute; top:40%; left:70%; "><input type="text" id="bq7" value="0" size="3" readonly="true" style="background-color:#FFFFFF; border:#FFFFFF none 0px; text-align:center; font-size:30px"> </div>
+			
+			<script language="javascript">
+				document.getElementById('q7').value=q1;
+				document.getElementById("q7.1").onclick = function() {
+				modifier_q7(+1); modifier_aq7(2.32091); modifier_bq7(-5.6992);
+				}
+				document.getElementById("q7.2").onclick = function() {
+				modifier_q7(+2); modifier_aq7(0); modifier_bq7(0);
+				}
+				
+			</script>
+		
+		<!--Question 8-->
+		<div style="position: absolute; top:45%; left:15%; right: 5%;"> Question 5
+		<input id="q8.1" type="radio" name="question8" class="radio" onclick="verifie_check_box(1)"/>
+		<input id="q8.2" type="radio" name="question8" class="radio" onclick="verifie_check_box(2)"/>
+		<input id="q8.3" type="radio" name="question8" class="radio" onclick="verifie_check_box(3)"/>
+		<input id="q8.4" type="radio" name="question8" class="radio" onclick="verifie_check_box(4)"/>
+		<input id="q8.5" type="radio" name="question8" class="radio" onclick="verifie_check_box(5)"/>
+		</div>
+
+			<script language="javascript">
+								var q8=0;
+								function modifier_q8(increment) {
+								q8=increment;
+								document.getElementById('q8').value = q8;
+								}
+								
+								var aq8=0;
+								function modifier_aq8(increment) {
+								aq8=increment;
+								document.getElementById('aq8').value = aq8;
+								}
+								
+								var bq8=0;
+								function modifier_bq8(increment) {
+								bq8=increment;
+								document.getElementById('bq8').value = bq8;
+								}
+								
+			</script>
+								
+			<div style="text-align:center; display:none;  position: absolute; top:45%; left:50%; "><input type="text" id="q8" value="0" size="3" readonly="true" style="background-color:#FFFFFF; border:#FFFFFF none 0px; text-align:center; font-size:30px"> </div>
+			<div style="text-align:center; display:none;  position: absolute; top:45%; left:60%; "><input type="text" id="aq8" value="0" size="3" readonly="true" style="background-color:#FFFFFF; border:#FFFFFF none 0px; text-align:center; font-size:30px"> </div>					
+			<div style="text-align:center; display:none;  position: absolute; top:45%; left:70%; "><input type="text" id="bq8" value="0" size="3" readonly="true" style="background-color:#FFFFFF; border:#FFFFFF none 0px; text-align:center; font-size:30px"> </div>
+			
+			<script language="javascript">
+				document.getElementById('q8').value=q1;
+				document.getElementById("q8.1").onclick = function() {
+				modifier_q8(+1); modifier_aq8(0); modifier_bq8(0); 
+				}
+				document.getElementById("q8.2").onclick = function() {
+				modifier_q8(+2); modifier_aq8(-3.83130); modifier_bq8(0.90384); 
+				}
+				document.getElementById("q8.3").onclick = function() {
+				modifier_q8(+3); modifier_aq8(-6.50522); modifier_bq8(1.4938); 
+				}
+				document.getElementById("q8.4").onclick = function() {
+				modifier_q8(+4); modifier_aq8(-8.38063); modifier_bq8(1.76691); 
+				}
+				document.getElementById("q8.5").onclick = function() {
+				modifier_q8(+5); modifier_aq8(-11.25544); modifier_bq8(1.48619); 
+				}
+			</script>
+			
+		<!--Question 9-->
+		<div style="position: absolute; top:50%; left:15%; right: 5%;"> Question 6
+		<input id="q9.1" type="radio" name="question9" class="radio" onclick="verifie_check_box(1)"/>
+		<input id="q9.2" type="radio" name="question9" class="radio" onclick="verifie_check_box(2)"/>
+		<input id="q9.3" type="radio" name="question9" class="radio" onclick="verifie_check_box(3)"/>
+		<input id="q9.4" type="radio" name="question9" class="radio" onclick="verifie_check_box(4)"/>
+		<input id="q9.5" type="radio" name="question9" class="radio" onclick="verifie_check_box(5)"/>
+		</div>
+
+			<script language="javascript">
+								var q9=0;
+								function modifier_q9(increment) {
+								q9=increment;
+								document.getElementById('q9').value = q9;
+								}
+								
+								var aq9=0;
+								function modifier_aq9(increment) {
+								aq9=increment;
+								document.getElementById('aq9').value = aq9;
+								}
+								
+								var bq9=0;
+								function modifier_bq9(increment) {
+								bq9=increment;
+								document.getElementById('bq9').value = bq9;
+								}
+								
+			</script>
+								
+			<div style="text-align:center; display:none;  position: absolute; top:50%; left:50%; "><input type="text" id="q9" value="0" size="3" readonly="true" style="background-color:#FFFFFF; border:#FFFFFF none 0px; text-align:center; font-size:30px"> </div>
+			<div style="text-align:center; display:none;  position: absolute; top:50%; left:60%; "><input type="text" id="aq9" value="0" size="3" readonly="true" style="background-color:#FFFFFF; border:#FFFFFF none 0px; text-align:center; font-size:30px"> </div>					
+			<div style="text-align:center; display:none;  position: absolute; top:50%; left:70%; "><input type="text" id="bq9" value="0" size="3" readonly="true" style="background-color:#FFFFFF; border:#FFFFFF none 0px; text-align:center; font-size:30px"> </div>
+			
+			<script language="javascript">
+				document.getElementById('q9').value=q1;
+				document.getElementById("q9.1").onclick = function() {
+				modifier_q9(+1); modifier_aq9(-0.33682); modifier_bq9(-6.2972);
+				}
+				document.getElementById("q9.2").onclick = function() {
+				modifier_q9(+2); modifier_aq9(-0.9434); modifier_bq9(-8.26066);
+				}
+				document.getElementById("q9.3").onclick = function() {
+				modifier_q9(+3); modifier_aq9(-0.1804); modifier_bq9(-5.63286);
+				}
+				document.getElementById("q9.4").onclick = function() {
+				modifier_q9(+4); modifier_aq9(-0.11038); modifier_bq9(-3.1389);
+				}
+				document.getElementById("q9.5").onclick = function() {
+				modifier_q9(+5); modifier_aq9(0); modifier_bq9(0);
+				}
+			</script>
+			
+		<!--Question 10-->
+		<div style="position: absolute; top:55%; left:15%; right: 5%;"> Question 7a
+		<input id="q10.1" type="radio" name="question10" class="radio" onclick="verifie_check_box(1)"/>
+		<input id="q10.2" type="radio" name="question10" class="radio" onclick="verifie_check_box(2)"/>
+		<input id="q10.3" type="radio" name="question10" class="radio" onclick="verifie_check_box(3)"/>
+		<input id="q10.4" type="radio" name="question10" class="radio" onclick="verifie_check_box(4)"/>
+		<input id="q10.5" type="radio" name="question10" class="radio" onclick="verifie_check_box(5)"/>
+		<input id="q10.6" type="radio" name="question10" class="radio" onclick="verifie_check_box(5)"/>
+		</div>
+
+			<script language="javascript">
+								var q10=0;
+								function modifier_q10(increment) {
+								q10=increment;
+								document.getElementById('q10').value = q10;
+								}
+								
+								var aq10=0;
+								function modifier_aq10(increment) {
+								aq10=increment;
+								document.getElementById('aq10').value = aq10;
+								}
+								
+								var q10=0;
+								function modifier_bq10(increment) {
+								bq10=increment;
+								document.getElementById('bq10').value = bq10;
+								}
+								
+			</script>
+								
+			<div style="text-align:center; display:none;  position: absolute; top:55%; left:50%; "><input type="text" id="q10" value="0" size="3" readonly="true" style="background-color:#FFFFFF; border:#FFFFFF none 0px; text-align:center; font-size:30px"> </div>
+			<div style="text-align:center; display:none;  position: absolute; top:55%; left:60%; "><input type="text" id="aq10" value="0" size="3" readonly="true" style="background-color:#FFFFFF; border:#FFFFFF none 0px; text-align:center; font-size:30px"> </div>					
+			<div style="text-align:center; display:none;  position: absolute; top:55%; left:70%; "><input type="text" id="bq10" value="0" size="3" readonly="true" style="background-color:#FFFFFF; border:#FFFFFF none 0px; text-align:center; font-size:30px"> </div>	
+				
+			<script language="javascript">
+				document.getElementById('q10').value=q1;
+				document.getElementById("q10.1").onclick = function() {
+				modifier_q10(+1); modifier_aq10(0); modifier_bq10(0);
+				}
+				document.getElementById("q10.2").onclick = function() {
+				modifier_q10(+2); modifier_aq10(0.6651); modifier_bq10(-1.94949);
+				}
+				document.getElementById("q10.3").onclick = function() {
+				modifier_q10(+3); modifier_aq10(1.3668); modifier_bq10(-4.0984);
+				}
+				document.getElementById("q10.4").onclick = function() {
+				modifier_q10(+4); modifier_aq10(2.37241); modifier_bq10(-6.31121);
+				}
+				document.getElementById("q10.5").onclick = function() {
+				modifier_q10(+5); modifier_aq10(2.9042); modifier_bq10(-7.92717);
+				}
+				document.getElementById("q10.6").onclick = function() {
+				modifier_q10(+6); modifier_aq10(3.46638); modifier_bq10(-10.19085);
+				}
+			</script>
+			
+		<!--Question 11-->
+		<div style="position: absolute; top:60%; left:15%; right: 5%;"> Question 7b
+		<input id="q11.1" type="radio" name="question11" class="radio" onclick="verifie_check_box(1)"/>
+		<input id="q11.2" type="radio" name="question11" class="radio" onclick="verifie_check_box(2)"/>
+		<input id="q11.3" type="radio" name="question11" class="radio" onclick="verifie_check_box(3)"/>
+		<input id="q11.4" type="radio" name="question11" class="radio" onclick="verifie_check_box(4)"/>
+		<input id="q11.5" type="radio" name="question11" class="radio" onclick="verifie_check_box(5)"/>
+		<input id="q11.6" type="radio" name="question11" class="radio" onclick="verifie_check_box(5)"/>
+		</div>
+
+			<script language="javascript">
+								var q11=0;
+								function modifier_q11(increment) {
+								q11=increment;
+								document.getElementById('q11').value = q11;
+								}
+								
+								var aq11=0;
+								function modifier_aq11(increment) {
+								aq11=increment;
+								document.getElementById('aq11').value = aq11;
+								}
+								
+								var bq11=0;
+								function modifier_bq11(increment) {
+								bq11=increment;
+								document.getElementById('bq11').value = bq11;
+								}
+								
+			</script>
+								
+			<div style="text-align:center; display:none;  position: absolute; top:60%; left:50%; "><input type="text" id="q11" value="0" size="3" readonly="true" style="background-color:#FFFFFF; border:#FFFFFF none 0px; text-align:center; font-size:30px"> </div>
+			<div style="text-align:center; display:none;  position: absolute; top:60%; left:60%; "><input type="text" id="aq11" value="0" size="3" readonly="true" style="background-color:#FFFFFF; border:#FFFFFF none 0px; text-align:center; font-size:30px"> </div>					
+			<div style="text-align:center; display:none;  position: absolute; top:60%; left:70%; "><input type="text" id="bq11" value="0" size="3" readonly="true" style="background-color:#FFFFFF; border:#FFFFFF none 0px; text-align:center; font-size:30px"> </div>			
+						
+			<script language="javascript">
+				document.getElementById('q11').value=q11;
+				document.getElementById("q11.1").onclick = function() {
+				modifier_q11(+1); modifier_aq11(0); modifier_bq11(0);
+				}
+				document.getElementById("q11.2").onclick = function() {
+				modifier_q11(+2); modifier_aq11(-0.4225); modifier_bq11(-0.9205);
+				}
+				document.getElementById("q11.3").onclick = function() {
+				modifier_q11(+3); modifier_aq11(-1.14387); modifier_bq11(-1.6517);
+				}
+				document.getElementById("q11.4").onclick = function() {
+				modifier_q11(+4); modifier_aq11(-1.6185); modifier_bq11(-3.2980);
+				}
+				document.getElementById("q11.5").onclick = function() {
+				modifier_q11(+5); modifier_aq11(-2.0216); modifier_bq11(-4.88962);
+				}
+				document.getElementById("q11.6").onclick = function() {
+				modifier_q11(+5); modifier_aq11(-2.44706); modifier_bq11(-6.02409);
+				}
+			</script>
+			
+		<!--Question 12-->
+		<div style="position: absolute; top:65%; left:15%; right: 5%;"> Question 7c
+		<input id="q12.1" type="radio" name="question12" class="radio" onclick="verifie_check_box(1)"/>
+		<input id="q12.2" type="radio" name="question12" class="radio" onclick="verifie_check_box(2)"/>
+		<input id="q12.3" type="radio" name="question12" class="radio" onclick="verifie_check_box(3)"/>
+		<input id="q12.4" type="radio" name="question12" class="radio" onclick="verifie_check_box(4)"/>
+		<input id="q12.5" type="radio" name="question12" class="radio" onclick="verifie_check_box(5)"/>
+		<input id="q12.6" type="radio" name="question12" class="radio" onclick="verifie_check_box(5)"/>
+		</div>
+
+			<script language="javascript">
+								var q12=0;
+								function modifier_q12(increment) {
+								q12=increment;
+								document.getElementById('q12').value = q12;
+								}
+								
+								var aq12=0;
+								function modifier_aq12(increment) {
+								aq12=increment;
+								document.getElementById('aq12').value = aq12;
+								}
+								
+								var bq12=0;
+								function modifier_bq12(increment) {
+								bq12=increment;
+								document.getElementById('bq12').value = bq12;
+								}
+								
+			</script>
+								
+			<div style="text-align:center; display:none;  position: absolute; top:65%; left:50%; "><input type="text" id="q12" value="0" size="3" readonly="true" style="background-color:#FFFFFF; border:#FFFFFF none 0px; text-align:center; font-size:30px"> </div>
+			<div style="text-align:center; display:none;  position: absolute; top:65%; left:60%; "><input type="text" id="aq12" value="0" size="3" readonly="true" style="background-color:#FFFFFF; border:#FFFFFF none 0px; text-align:center; font-size:30px"> </div>					
+			<div style="text-align:center; display:none;  position: absolute; top:65%; left:70%; "><input type="text" id="bq12" value="0" size="3" readonly="true" style="background-color:#FFFFFF; border:#FFFFFF none 0px; text-align:center; font-size:30px"> </div>
+			
+			<script language="javascript">
+				document.getElementById('q12').value=q1;
+				document.getElementById("q12.1").onclick = function() {
+				modifier_q12(+1); modifier_aq12(4.61446); modifier_bq12(-16.1539);
+				}
+				document.getElementById("q12.2").onclick = function() {
+				modifier_q12(+2); modifier_aq12(3.4159); modifier_bq12(-10.7791);
+				}
+				document.getElementById("q12.3").onclick = function() {
+				modifier_q12(+3); modifier_aq12(2.3424); modifier_bq12(-8.0991);
+				}
+				document.getElementById("q12.4").onclick = function() {
+				modifier_q12(+4); modifier_aq12(1.2804); modifier_bq12(-4.59055);
+				}
+				document.getElementById("q12.5").onclick = function() {
+				modifier_q12(+5); modifier_aq12(0.41188); modifier_bq12(-1.95934);
+				}
+				document.getElementById("q12.6").onclick = function() {
+				modifier_q12(+6); modifier_aq12(0); modifier_bq12(0);
+				}
+				
+			</script>
+		
+		<!--Calcul-->
+		
+		
+		
+		<script language="javascript">
+								var total= 0;
+						
+		document.getElementById("ok11").onclick = function() {
+				var num1, num2, num3, num4, num5, num6, num7, num8,num9, num10,num11, num12, sum;
+				num1 = Number(document.getElementById('q1').value);
+				num2 = Number( document.getElementById('q2').value);
+				num3 = Number( document.getElementById('q3').value);
+				num4 = Number( document.getElementById('q4').value);
+				num5 = Number( document.getElementById('q5').value);
+				num6 = Number( document.getElementById('q6').value);
+				num7 = Number( document.getElementById('q7').value);
+				num8 = Number( document.getElementById('q8').value);
+				num9 = Number( document.getElementById('q9').value);
+				num10 = Number( document.getElementById('q10').value);
+				num11 = Number( document.getElementById('q11').value);
+				num12 = Number( document.getElementById('q12').value);
+				sum = num1 + num2 + num3 + num4 + num5 + num6 + num7 + num8 + num9 + num10 + num11 + num12;
+				
+				document.getElementById('total').value = sum;
+						
+
+								var totala= 0;
+						
+		
+				var numa1, numa2, numa3, numa4, numa5, numa6, numa7, numa8,numa9, numa10,numa11, numa12, suma;
+				numa1 = Number(document.getElementById('aq1').value);
+				numa2 = Number( document.getElementById('aq2').value);
+				numa3 = Number( document.getElementById('aq3').value);
+				numa4 = Number( document.getElementById('aq4').value);
+				numa5 = Number( document.getElementById('aq5').value);
+				numa6 = Number( document.getElementById('aq6').value);
+				numa7 = Number( document.getElementById('aq7').value);
+				numa8 = Number( document.getElementById('aq8').value);
+				numa9 = Number( document.getElementById('aq9').value);
+				numa10 = Number( document.getElementById('aq10').value);
+				numa11 = Number( document.getElementById('aq11').value);
+				numa12 = Number( document.getElementById('aq12').value);
+				sum = numa1 + numa2 + numa3 + numa4 + numa5 + numa6 + numa7 + numa8 + numa9 + numa10 + numa11 + numa12;
+				
+				document.getElementById('totala').value = sum;
+							
+				
+								var totalb= 0;
+						
+		
+				var numb1, numb2, numb3, numb4, nubm5, numb6, numb7, numb8,numb9, numb10,numb11, numb12, sumb;
+				numb1 = Number(document.getElementById('bq1').value);
+				numb2 = Number( document.getElementById('bq2').value);
+				numb3 = Number( document.getElementById('bq3').value);
+				numb4 = Number( document.getElementById('bq4').value);
+				numb5 = Number( document.getElementById('bq5').value);
+				numb6 = Number( document.getElementById('bq6').value);
+				numb7 = Number( document.getElementById('bq7').value);
+				numb8 = Number( document.getElementById('bq8').value);
+				numb9 = Number( document.getElementById('bq9').value);
+				numb10 = Number( document.getElementById('bq10').value);
+				numb11 = Number( document.getElementById('bq11').value);
+				numb12 = Number( document.getElementById('bq12').value);
+				sumb = numb1 + numb2 + numb3 + numb4 + numb5 + numb6 + numb7 + numb8 + numb9 + numb10 + numb11 + numb12;
+				
+				document.getElementById('totalb').value = sumb;
+					
+
+							var totalc= 60.75781;
+							
+				var numc1, numc2, sumc;
+				numc1 = Number(document.getElementById('totalb').value);
+				numc2 = totalc;	
+				sumc = numc1 + numc2 ;
+				document.getElementById('totalc').value = sumc;
+				
+							var totald= 56.57706;
+							
+				var numd1, numd2, sumd;
+				numd1 = Number(document.getElementById('totala').value);
+				numd2 = totald;	
+				sumd = numd1 + numd2 ;
+				document.getElementById('totald').value = sumd;
+				
+			
+								
+				
+				}
+				function modifier_total(increment) {
+								total=increment;
+								document.getElementById('total').value = total;
+								}
+				function modifier_totala(increment) {
+								totala=increment;
+								document.getElementById('totala').value = totala;
+								}
+				function modifier_totalb(increment) {
+								totalb=increment;
+								document.getElementById('totalb').value = totalb;
+								}
+				function modifier_totalc(increment) {
+								totalc=increment;
+								document.getElementById('totalc').value = totalc;
+								}
+				function modifier_totald(increment) {
+								totald=increment;
+								document.getElementById('totald').value = totald;
+								}
+			</script>
+			<div style="text-align:center; display:none;  position: absolute; top:80%; left:50%; "><input type="text" id="total" value="0" size="6" readonly="true" style="background-color:#FFFFFF; border:#FFFFFF none 0px; text-align:center; font-size:30px"> </div>
+			<div style="text-align:center; display:none;  position: absolute; top:80%; left:60%; "><input type="text" id="totala" value="0" size="6" readonly="true" style="background-color:#FFFFFF; border:#FFFFFF none 0px; text-align:center; font-size:30px"> </div>
+			<div style="text-align:center; display:none;  position: absolute; top:80%; left:70%; "><input type="text" id="totalb" value="0" size="6" readonly="true" style="background-color:#FFFFFF; border:#FFFFFF none 0px; text-align:center; font-size:30px"> </div>
+			
+		
+		
+			<script>
+			
+		document.getElementById("reset").onclick = function() {	
+			document.getElementById("q1.1").checked = false;
+			document.getElementById("q1.2").checked = false;
+			document.getElementById("q1.3").checked = false;
+			document.getElementById("q1.4").checked = false;
+			document.getElementById("q1.5").checked = false;
+			
+			document.getElementById("q2.1").checked = false;
+			document.getElementById("q2.2").checked = false;
+			document.getElementById("q2.3").checked = false;
+			
+			document.getElementById("q3.1").checked = false;
+			document.getElementById("q3.2").checked = false;
+			document.getElementById("q3.3").checked = false;
+			
+			document.getElementById("q4.1").checked = false;
+			document.getElementById("q4.2").checked = false;
+			
+			document.getElementById("q5.1").checked = false;
+			document.getElementById("q5.2").checked = false;
+			
+			document.getElementById("q6.1").checked = false;
+			document.getElementById("q6.2").checked = false;
+			
+			document.getElementById("q7.1").checked = false;
+			document.getElementById("q7.2").checked = false;
+			
+			document.getElementById("q8.1").checked = false;
+			document.getElementById("q8.2").checked = false;
+			document.getElementById("q8.3").checked = false;
+			document.getElementById("q8.4").checked = false;
+			document.getElementById("q8.5").checked = false;
+			
+			document.getElementById("q9.1").checked = false;
+			document.getElementById("q9.2").checked = false;
+			document.getElementById("q9.3").checked = false;
+			document.getElementById("q9.4").checked = false;
+			document.getElementById("q9.5").checked = false;
+			
+			document.getElementById("q10.1").checked = false;
+			document.getElementById("q10.2").checked = false;
+			document.getElementById("q10.3").checked = false;
+			document.getElementById("q10.4").checked = false;
+			document.getElementById("q10.5").checked = false;
+			document.getElementById("q10.6").checked = false;
+			
+			document.getElementById("q11.1").checked = false;
+			document.getElementById("q11.2").checked = false;
+			document.getElementById("q11.3").checked = false;
+			document.getElementById("q11.4").checked = false;
+			document.getElementById("q11.5").checked = false;
+			document.getElementById("q11.6").checked = false;
+			
+			document.getElementById("q12.1").checked = false;
+			document.getElementById("q12.2").checked = false;
+			document.getElementById("q12.3").checked = false;
+			document.getElementById("q12.4").checked = false;
+			document.getElementById("q12.5").checked = false;
+			document.getElementById("q12.6").checked = false;
+			
+			modifier_q1(0);
+			modifier_q2(0);
+			modifier_q3(0);
+			modifier_q4(0);
+			modifier_q5(0);
+			modifier_q6(0);
+			modifier_q7(0);
+			modifier_q8(0);
+			modifier_q9(0);
+			modifier_q10(0);
+			modifier_q11(0);
+			modifier_q12(0);
+			
+			modifier_aq1(0);
+			modifier_aq2(0);
+			modifier_aq3(0);
+			modifier_aq4(0);
+			modifier_aq5(0);
+			modifier_aq6(0);
+			modifier_aq7(0);
+			modifier_aq8(0);
+			modifier_aq9(0);
+			modifier_aq10(0);
+			modifier_aq11(0);
+			modifier_aq12(0);
+			
+			modifier_bq1(0);
+			modifier_bq2(0);
+			modifier_bq3(0);
+			modifier_bq4(0);
+			modifier_bq5(0);
+			modifier_bq6(0);
+			modifier_bq7(0);
+			modifier_bq8(0);
+			modifier_bq9(0);
+			modifier_bq10(0);
+			modifier_bq11(0);
+			modifier_bq12(0);
+			
+			modifier_total(0);
+			modifier_totala(0);
+			modifier_totalb(0);
+			modifier_totalc(60.75781);
+			modifier_totald(56.57706);
+			
+			document.getElementById("totalc").value = 0;
+			document.getElementById("totald").value = 0;
+			}
+			</script>
+	
+	</body>
+</html>
